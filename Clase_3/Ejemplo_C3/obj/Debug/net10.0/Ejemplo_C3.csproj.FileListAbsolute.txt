@@ -1,0 +1,15 @@
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\bin\Debug\net10.0\Ejemplo_C3.exe
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\bin\Debug\net10.0\Ejemplo_C3.deps.json
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\bin\Debug\net10.0\Ejemplo_C3.runtimeconfig.json
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\bin\Debug\net10.0\Ejemplo_C3.dll
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\bin\Debug\net10.0\Ejemplo_C3.pdb
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.AssemblyInfoInputs.cache
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.AssemblyInfo.cs
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.csproj.CoreCompileInputs.cache
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.sourcelink.json
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.dll
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\refint\Ejemplo_C3.dll
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.pdb
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\Ejemplo_C3.genruntimeconfig.cache
+C:\Users\luftd\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\Documentos\IPC2_PRIMER_SEMESTRE\IPC2_PS2026_D\Clase_3\Ejemplo_C3\obj\Debug\net10.0\ref\Ejemplo_C3.dll

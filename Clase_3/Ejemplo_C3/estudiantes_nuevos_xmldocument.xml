@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<universidad>
+  <estudiantes>
+    <estudiante id="1" carnet="3456">
+      <nombre>Ana Martínez</nombre>
+      <carnet>202112345</carnet>
+      <carrera>Ingeniería Mecánica</carrera>
+      <promedio>92.5</promedio>
+    </estudiante>
+    <estudiante id="2" carnet="7890">
+      <nombre>Pedro Ramírez</nombre>
+      <carnet>202112346</carnet>
+      <carrera>Ingeniería Química</carrera>
+      <promedio>87.8</promedio>
+    </estudiante>
+  </estudiantes>
+</universidad>

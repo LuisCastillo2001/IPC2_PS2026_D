@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<universidad>
+  <estudiantes>
+    <estudiante id="1" carnet="1234">
+      <nombre>Juan Pérez</nombre>
+      <carrera>Ingeniería en Sistemas</carrera>
+      <promedio>85.5</promedio>
+    </estudiante>
+    <estudiante id="2" carnet="5678">
+      <nombre>María López</nombre>
+      <carrera>Ingeniería Industrial</carrera>
+      <promedio>90.0</promedio>
+    </estudiante>
+    <estudiante id="3" carnet="9012">
+      <nombre>Carlos García</nombre>
+      <carrera>Ingeniería Civil</carrera>
+      <promedio>88.3</promedio>
+    </estudiante>
+  </estudiantes>
+</universidad>

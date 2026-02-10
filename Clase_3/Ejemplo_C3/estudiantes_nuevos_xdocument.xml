@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<universidad>
+  <estudiantes>
+    <estudiante id="1" carnet="2001">
+      <nombre>Ana Martínez</nombre>
+      <carrera>Ingeniería Mecánica</carrera>
+      <promedio>92.5</promedio>
+    </estudiante>
+    <estudiante id="2" carnet="2002">
+      <nombre>Pedro Ramírez</nombre>
+      <carrera>Ingeniería Química</carrera>
+      <promedio>87.8</promedio>
+    </estudiante>
+    <estudiante id="3" carnet="2003">
+      <nombre>Laura Sánchez</nombre>
+      <carrera>Ingeniería Eléctrica</carrera>
+      <promedio>95.0</promedio>
+    </estudiante>
+  </estudiantes>
+</universidad>

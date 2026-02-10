@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<universidad>
+  <estudiantes>
+    <estudiante id="1" carnet="3001">
+      <nombre>Roberto Castillo</nombre>
+      <carrera>Ingeniería Mecánica Industrial</carrera>
+      <promedio>89.5</promedio>
+    </estudiante>
+    <estudiante id="2" carnet="3002">
+      <nombre>Gabriela Flores</nombre>
+      <carrera>Ingeniería Electrónica</carrera>
+      <promedio>93.2</promedio>
+    </estudiante>
+  </estudiantes>
+</universidad>
