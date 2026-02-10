@@ -1,8 +1,8 @@
 using System;
 
 namespace EjemploPOO
+
 {
-    // HERENCIA: Gato hereda de Animal
     public class Gato : Animal
     {
         private string color;
@@ -12,7 +12,6 @@ namespace EjemploPOO
             this.color = color;
         }
 
-        // Métodos Get y Set para color
         public string GetColor()
         {
             return color;
@@ -23,15 +22,17 @@ namespace EjemploPOO
             this.color = color;
         }
 
-        // POLIMORFISMO: Implementación específica del método abstracto
+        // POLIMORFISMO
+
         public override void HacerSonido()
         {
-            Console.WriteLine($"{GetNombre()} dice: ¡Miau miau!");
+            Console.WriteLine($"{GetNombre()}, dice: Miau");
         }
 
         public void Dormir()
         {
-            Console.WriteLine($"{GetNombre()} está durmiendo tranquilamente");
+            Console.WriteLine($"{GetNombre()} esta durmiendo tranquilamente");
         }
+
     }
 }
