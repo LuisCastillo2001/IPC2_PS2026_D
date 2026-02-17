@@ -36,7 +36,7 @@ namespace Clase_3
             // Ejemplo 3: XPathNavigator - Escritura
             EjemploXPathNavigator.EscribirXML();
 
-            Console.WriteLine("\n└──────────────────────────────────────────┘\n");
+            //Console.WriteLine("\n└──────────────────────────────────────────┘\n");
 
             Console.WriteLine("\nPresione cualquier tecla para salir...");
             Console.ReadKey();

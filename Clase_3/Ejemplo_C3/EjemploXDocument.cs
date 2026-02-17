@@ -1,54 +1,41 @@
 using System;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Xml.Linq;
 
-namespace Clase_3
-{
-    /// <summary>
-    /// Ejemplo de lectura XML usando XDocument (LINQ to XML)
-    /// Ventajas: Sintaxis más moderna, integración con LINQ, más fácil de usar
-    /// Desventajas: También carga todo en memoria
-    /// </summary>
-    public class EjemploXDocument
-    {
-        public static void LeerXML()
-        {
-            Console.WriteLine("\n=== Ejemplo XDocument (LINQ to XML) ===\n");
+namespace Clase_3{
 
-            try
-            {
-                // Cargar el archivo XML
+    public class EjemploXDocument{
+        public static void LeerXML(){
+            Console.WriteLine("\n=== Ejemplo XDocument ===== \n");
+
+
+            try{
                 XDocument doc = XDocument.Load("estudiantes.xml");
 
-                // Obtener el elemento raíz
                 XElement raiz = doc.Root;
-                Console.WriteLine($"Nodo raíz: {raiz.Name}\n");
-
-                // Método 1: Usando métodos de navegación
+                Console.WriteLine($"Nodo raiz: {raiz.Name}");
                 var estudiantes = doc.Descendants("estudiante");
-                Console.WriteLine($"Total de estudiantes: {estudiantes.Count()}\n");
 
-                foreach (var estudiante in estudiantes)
-                {
-                    // Leer atributos
+                foreach (var estudiante in estudiantes){
                     string id = estudiante.Attribute("id").Value;
                     string carnet = estudiante.Attribute("carnet").Value;
-                    
+
                     Console.WriteLine($"ID: {id}");
                     Console.WriteLine($"Carnet: {carnet}");
 
-                    // Leer elementos hijos
+
+                    // Leer los elementos hijos
                     string nombre = estudiante.Element("nombre").Value;
                     string carrera = estudiante.Element("carrera").Value;
                     double promedio = double.Parse(estudiante.Element("promedio").Value);
 
                     Console.WriteLine($"Nombre: {nombre}");
                     Console.WriteLine($"Carrera: {carrera}");
-                    Console.WriteLine($"Promedio: {promedio:F2}");
-                    Console.WriteLine("------------------------");
+                    Console.WriteLine($"Promedio: {promedio}");
                 }
 
-                // Método 2: Usando LINQ Query
+                 // Método 2: Usando LINQ Query
                 Console.WriteLine("\nEstudiantes con promedio >= 88:");
                 var estudiantesDestacados = from e in doc.Descendants("estudiante")
                                            where double.Parse(e.Element("promedio").Value) >= 88
@@ -63,14 +50,12 @@ namespace Clase_3
                 {
                     Console.WriteLine($"[{est.Carnet}] {est.Nombre} - Promedio: {est.Promedio}");
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
+            } catch (Exception ex){
+                Console.WriteLine("Hubo un error");
             }
         }
 
-        public static void EscribirXML()
+         public static void EscribirXML()
         {
             Console.WriteLine("\n=== Ejemplo XDocument (LINQ to XML) - ESCRITURA ===\n");
 
@@ -115,5 +100,6 @@ namespace Clase_3
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
+    
     }
 }
