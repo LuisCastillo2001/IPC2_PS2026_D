@@ -1,0 +1,27 @@
+digraph Empleados_Tecnologia {
+  label="Lista Doblemente Circular - Empleados de Tecnologia";
+  labelloc="t";
+  fontsize=16;
+  fontname="Arial Bold";
+  rankdir=LR;
+  splines=curved;
+  nodesep=1.5;
+  bgcolor="white";
+
+  node [shape=record, style="filled,rounded", fillcolor="#4BC8C8", fontname="Arial Bold", fontsize=12, color="#E8A020", penwidth=3, height=0.8];
+  edge [penwidth=2, fontname="Arial", fontsize=9];
+
+  emp_Tecnologia_LUIS [label="{ LUIS | DK | Q1000 }"];
+  emp_Tecnologia_Pruedsbf [label="{ Pruedsbf | ffm | Q10000 }"];
+  emp_Tecnologia_Pnfng [label="{ Pnfng | dkfkfd | Q100000 }"];
+
+  emp_Tecnologia_LUIS -> emp_Tecnologia_Pruedsbf [color="#333333", arrowhead=vee];
+  emp_Tecnologia_Pruedsbf -> emp_Tecnologia_Pnfng [color="#333333", arrowhead=vee];
+
+  emp_Tecnologia_Pruedsbf -> emp_Tecnologia_LUIS [color="#333333", arrowhead=vee, constraint=false, dir = back];
+  emp_Tecnologia_Pnfng -> emp_Tecnologia_Pruedsbf [color="#333333", arrowhead=vee, constraint=false, dir = back];
+
+  emp_Tecnologia_Pnfng -> emp_Tecnologia_LUIS [color="#333333", arrowhead=vee, constraint=false, tailport=s, headport=s, style=bold, dir=back];
+
+  emp_Tecnologia_LUIS -> emp_Tecnologia_Pnfng [color="#333333", arrowhead=vee, constraint=false, tailport=n, headport=n, style=bold];
+}

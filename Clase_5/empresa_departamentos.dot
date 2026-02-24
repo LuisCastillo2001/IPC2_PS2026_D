@@ -1,0 +1,16 @@
+digraph Departamentos {
+  label="Lista Circular Simple de Departamentos";
+  labelloc="t";
+  fontsize=18;
+  fontname="Arial Bold";
+  rankdir=LR;
+  nodesep=1.0;
+  node [shape=record, style=filled, fillcolor="#87CEEB", fontname="Arial", fontsize=12];
+  edge [penwidth=2];
+
+  dep_Tecnologia [label="{ Tecnologia | Prueba }"];
+  dep_Marketing [label="{ Marketing | dslf }"];
+
+  dep_Tecnologia -> dep_Marketing [color="#4169E1"];
+  dep_Marketing -> dep_Tecnologia [color="#FF0000", penwidth=3, style=bold, label="Regresa al inicio", fontsize=10, fontcolor="#FF0000"];
+}

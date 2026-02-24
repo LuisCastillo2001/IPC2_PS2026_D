@@ -55,7 +55,7 @@ public class ListaEnlazadaDoble
 
     public void reset()
     {
-        // de igual forma a poner null, el recolector de basura se encargará de liberar la memoria, ya que no hay punteros que apunten a la raiz y sus nodos
+        
         Raiz = null;
     }
 

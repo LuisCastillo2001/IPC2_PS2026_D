@@ -22,7 +22,7 @@ ListaEnlazadaDoble listaDoble = new ListaEnlazadaDoble();
 listaDoble.append(new NodoLED(new EjListaEnlazadaDoble.Libro("Cien Años de Soledad", "Gabriel García Márquez", 1967)));
 listaDoble.append(new NodoLED(new EjListaEnlazadaDoble.Libro("Don Quijote de la Mancha", "Miguel de Cervantes", 1605)));
 listaDoble.append(new NodoLED(new EjListaEnlazadaDoble.Libro("La Sombra del Viento", "Carlos Ruiz Zafón", 2001)));
-Console.WriteLine("Lista en orden ascendente:");
+Console.WriteLine("Lista en orden ascendente:"); 
 listaDoble.printAcendente();
 Console.WriteLine("Lista en orden descendente:");
 listaDoble.printDescendente();
