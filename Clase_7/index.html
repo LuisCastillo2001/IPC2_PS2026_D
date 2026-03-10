@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a HTML y CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+    <h1>Introducción a HTML y CSS</h1>
+    <p>Ejemplo completo usando etiquetas principales, box model, tablas y formularios.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#intro">Inicio</a></li>
+        <li><a href="#listas">Listas</a></li>
+        <li><a href="#tabla">Tabla</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section id="intro" class="box">
+        <h2>1. ¿Qué es HTML?</h2>
+        <p>HTML estructura el contenido de una página web. Ejemplos de etiquetas comunes:</p>
+        <ul>
+            <li><code>&lt;h1&gt; - &lt;h6&gt;</code>: títulos</li>
+            <li><code>&lt;p&gt;</code>: párrafos</li>
+            <li><code>&lt;div&gt;</code>: contenedor genérico</li>
+            <li><code>&lt;span&gt;</code>: contenedor en línea</li>
+            <li><code>&lt;a&gt;</code>: enlaces</li>
+            <li><code>&lt;img&gt;</code>: imágenes</li>
+        </ul>
+
+        <img src="image.png" alt="Imagen de ejemplo" class="banner" />
+    </section>
+
+    <section id="listas" class="box">
+        <h2>2. Listas en HTML</h2>
+        <div class="columns">
+            <div class="col">
+                <h3>Lista Desordenada</h3>
+                <ul>
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Lista Ordenada</h3>
+                <ol>
+                    <li>Paso uno</li>
+                    <li>Paso dos</li>
+                    <li>Paso tres</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="tabla" class="box">
+        <h2>3. Ejemplo de Tabla</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>juan@example.com</td>
+                    <td>Administrador</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>maria@example.com</td>
+                    <td>Editor</td>
+                </tr>
+                <tr>
+                    <td>Carlos Ruiz</td>
+                    <td>carlos@example.com</td>
+                    <td>Usuario</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="formulario" class="box">
+        <h2>4. Formulario</h2>
+        <form>
+            <label>Nombre:</label>
+            <input type="text" placeholder="Escribe tu nombre" />
+
+            <label>Email:</label>
+            <input type="email" placeholder="correo@ejemplo.com" />
+
+            <label>Género:</label>
+            <select>
+                <option>Seleccionar...</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Otro</option>
+            </select>
+
+            <label>Mensaje:</label>
+            <textarea rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+            <button>Enviar</button>
+        </form>
+    </section>
+</div>
+
+<footer id="footer">
+    <p>Ejemplo para introducción a HTML y CSS.</p>
+</footer>
+
+</body>
+</html>

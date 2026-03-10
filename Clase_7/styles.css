@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+.box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.columns {
+    display: flex;
+    gap: 20px;
+}
+.col {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #eee;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.banner {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+
+/* --- Ejemplo básico de media query (responsive) --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .box {
+        padding: 15px;
+    }
+}
