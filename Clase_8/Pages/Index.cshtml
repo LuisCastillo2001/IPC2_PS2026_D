@@ -1,0 +1,100 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Lista Enlazada Simple";
+}
+
+<div class="simple-page">
+    <h1>Lista Enlazada Simple de Peliculas</h1>
+    <p class="intro-text">Ejemplo basico con Razor Pages, sin JavaScript y sin colecciones nativas para guardar datos.</p>
+
+    <div class="quick-nav">
+        <a href="#agregar">Ir a agregar</a>
+        <a href="#acciones">Ir a eliminar o limpiar</a>
+        <a href="#recorrer">Ir a recorrer lista</a>
+        <a href="#referencias">Ir a referencias</a>
+        <a asp-page="/VerLista">Ir a pagina Ver Lista</a>
+    </div>
+
+    <div class="status-box">
+        <strong>Mensaje:</strong> @Model.Mensaje
+    </div>
+
+    <section id="agregar" class="section-card">
+        <h2>Agregar pelicula (append)</h2>
+        <form method="post" asp-page-handler="Agregar" class="simple-form">
+            <div>
+                <label for="titulo">Titulo</label><br />
+                <input id="titulo" name="Titulo" value="@Model.Titulo" />
+            </div>
+            <div>
+                <label for="director">Director</label><br />
+                <input id="director" name="Director" value="@Model.Director" />
+            </div>
+            <div>
+                <label for="anio">Anio</label><br />
+                <input id="anio" name="Anio" type="number" value="@Model.Anio" />
+            </div>
+            <button type="submit" class="btn-main">Agregar</button>
+        </form>
+    </section>
+
+    <section id="acciones" class="section-card">
+        <h2>Acciones sobre la lista</h2>
+        <p>Usa estas acciones para eliminar el ultimo nodo o reiniciar toda la lista.</p>
+
+        <form method="post" asp-page-handler="EliminarUltimo" class="inline-form">
+            <button type="submit" class="btn-warn">Eliminar ultimo (pop)</button>
+        </form>
+
+        <form method="post" asp-page-handler="Limpiar" class="inline-form">
+            <button type="submit" class="btn-danger">Limpiar lista (reset)</button>
+        </form>
+    </section>
+
+    <section id="recorrer" class="section-card">
+        <h2>Recorrido de la lista</h2>
+
+        @{
+            var nodoActual = Model.Raiz;
+            int indice = 1;
+        }
+
+        @if (nodoActual == null)
+        {
+            <p>La lista esta vacia.</p>
+        }
+        else
+        {
+            <ul class="nodo-lista">
+                @while (nodoActual != null)
+                {
+                    <li>
+                        <span class="badge">Nodo @indice</span>
+                        <div>Titulo: @nodoActual.Pelicula.Titulo</div>
+                        <div>Director: @nodoActual.Pelicula.Director</div>
+                        <div>Anio: @nodoActual.Pelicula.Anio</div>
+                    </li>
+
+                    nodoActual = nodoActual.Siguiente;
+                    indice = indice + 1;
+                }
+            </ul>
+        }
+    </section>
+
+    <section class="section-card">
+        <h2>Salida de print()</h2>
+        <pre class="print-box">@Model.TextoLista</pre>
+    </section>
+
+    <section id="referencias" class="section-card">
+        <h2>Referencias de paginas</h2>
+        <ul class="reference-list">
+            <li><a asp-page="/Index">Pagina principal</a></li>
+            <li><a asp-page="/VerLista">Pagina Ver Lista</a></li>
+            <li><a asp-page="/Privacy">Pagina Privacy</a></li>
+            <li><a asp-page="/Error">Pagina Error</a></li>
+        </ul>
+    </section>
+</div>

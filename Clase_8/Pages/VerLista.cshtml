@@ -1,0 +1,50 @@
+@page
+@model VerListaModel
+@{
+    ViewData["Title"] = "Ver Lista";
+}
+
+<div class="simple-page">
+    <h1>Visualizacion de la Lista Enlazada</h1>
+    <p class="intro-text">Esta pagina es solo para recorrer y ver el contenido actual de la lista.</p>
+
+    <div class="quick-nav">
+        <a asp-page="/Index">Volver a Index</a>
+    </div>
+
+    <section class="section-card">
+        <h2>Recorrido de nodos</h2>
+
+        @{
+            var nodoActual = Model.Raiz;
+            int indice = 1;
+        }
+
+        @if (nodoActual == null)
+        {
+            <p>La lista esta vacia.</p>
+        }
+        else
+        {
+            <ul class="nodo-lista">
+                @while (nodoActual != null)
+                {
+                    <li>
+                        <span class="badge">Nodo @indice</span>
+                        <div>Titulo: @nodoActual.Pelicula.Titulo</div>
+                        <div>Director: @nodoActual.Pelicula.Director</div>
+                        <div>Anio: @nodoActual.Pelicula.Anio</div>
+                    </li>
+
+                    nodoActual = nodoActual.Siguiente;
+                    indice = indice + 1;
+                }
+            </ul>
+        }
+    </section>
+
+    <section class="section-card">
+        <h2>Salida de print()</h2>
+        <pre class="print-box">@Model.TextoLista</pre>
+    </section>
+</div>
