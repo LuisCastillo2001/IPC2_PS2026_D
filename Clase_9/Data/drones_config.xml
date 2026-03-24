@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <listaDrones>
+    <dron>Dron01</dron>
+    <dron>Dron02</dron>
+    <dron>Dron03</dron>
+    <dron>Dron04</dron>
+  </listaDrones>
+  
+  <listaSistemasDrones>
+    <sistemaDrones nombre="SistemaDefensa">
+      <alturaMaxima>8</alturaMaxima>
+      <cantidadDrones>4</cantidadDrones>
+      <contenido>
+        <dron>Dron01</dron>
+        <alturas>
+          <altura valor="1">A</altura>
+          <altura valor="2">E</altura>
+          <altura valor="3">H</altura>
+          <altura valor="8"> </altura>
+        </alturas>
+      </contenido>
+      <contenido>
+        <dron>Dron02</dron>
+        <alturas>
+          <altura valor="1">B</altura>
+          <altura valor="2">F</altura>
+          <altura valor="4">L</altura>
+          <altura valor="7">U</altura>
+        </alturas>
+      </contenido>
+      <contenido>
+        <dron>Dron03</dron>
+        <alturas>
+          <altura valor="1">C</altura>
+          <altura valor="2">G</altura>
+          <altura valor="4">L</altura>
+          <altura valor="5">O</altura>
+          <altura valor="6">R</altura>
+        </alturas>
+      </contenido>
+      <contenido>
+        <dron>Dron04</dron>
+        <alturas>
+          <altura valor="1">D</altura>
+          <altura valor="2">A</altura>
+          <altura valor="4">E</altura>
+          <altura valor="7">W</altura>
+        </alturas>
+      </contenido>
+    </sistemaDrones>
+  </listaSistemasDrones>
+  
+  <listaMensajes>
+    <Mensaje nombre="HolaMundo">
+      <sistemaDrones>SistemaDefensa</sistemaDrones>
+      <instrucciones>
+        <instruccion dron="Dron01">3</instruccion>
+        <instruccion dron="Dron04">4</instruccion>
+        <instruccion dron="Dron03">4</instruccion>
+        <instruccion dron="Dron02">4</instruccion>
+        <instruccion dron="Dron03">5</instruccion>
+        <instruccion dron="Dron01">8</instruccion>
+        <instruccion dron="Dron04">7</instruccion>
+        <instruccion dron="Dron03">5</instruccion>
+        <instruccion dron="Dron03">6</instruccion>
+        <instruccion dron="Dron03">4</instruccion>
+        <instruccion dron="Dron04">1</instruccion>
+      </instrucciones>
+    </Mensaje>
+  </listaMensajes>
+</config>
