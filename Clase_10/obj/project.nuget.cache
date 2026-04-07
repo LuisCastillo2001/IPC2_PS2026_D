@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vhj3Q9+yPMM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\luftd\\OneDrive - Facultad de Ingeniería de la Universidad de San Carlos de Guatemala\\Documentos\\IPC2_PRIMER_SEMESTRE\\IPC2_PS2026_D\\Clase_10\\Clase_10.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luftd\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
+    "C:\\Users\\luftd\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
