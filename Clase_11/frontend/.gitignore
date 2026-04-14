@@ -1,0 +1,55 @@
+## Binaries and executables
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.o
+*.obj
+
+## Directories
+bin/
+obj/
+.vs/
+.vscode/
+node_modules/
+dist/
+build/
+
+## Files
+*.bak
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+appsettings.*.json
+!appsettings.Development.json
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Test Results
+TestResults/
+coverage/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+nuget.config
+
+## IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## OS
+Thumbs.db
+.vscode/settings.json

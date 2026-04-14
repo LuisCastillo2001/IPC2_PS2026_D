@@ -1,0 +1,46 @@
+@page
+@model CrearClienteModel
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <h1>Crear Nuevo Cliente</h1>
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre *</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Nombre del cliente">
+                <small class="form-text text-muted">Obligatorio</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="XXXX-XXXX">
+            </div>
+
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <textarea class="form-control" id="direccion" name="direccion" rows="3" placeholder="Dirección del cliente"></textarea>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success">Guardar Cliente</button>
+                <a href="/Clientes" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+
+        @if (Model.Error != null)
+        {
+            <div class="alert alert-danger mt-3">
+                @Model.Error
+            </div>
+        }
+    </div>
+</div>

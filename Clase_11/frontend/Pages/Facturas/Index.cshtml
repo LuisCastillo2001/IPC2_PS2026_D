@@ -1,0 +1,78 @@
+@page
+@model FacturasIndexModel
+@{
+    ViewData["Title"] = "Facturas";
+}
+
+<div class="row mb-3">
+    <div class="col-md-8">
+        <h1>Gestión de Facturas</h1>
+    </div>
+    <div class="col-md-4 text-end">
+        <a href="/Facturas/Crear" class="btn btn-success">Nueva Factura</a>
+    </div>
+</div>
+
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.Mensaje
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model.Error != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Model.Error
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model.Facturas.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Líneas</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var factura in Model.Facturas)
+                {
+                    <tr>
+                        <td><strong>@factura.Id</strong></td>
+                        <td>@factura.NombreCliente</td>
+                        <td>@factura.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td>@factura.CantidadLineas</td>
+                        <td class="fw-bold">Q @factura.Total.ToString("F2")</td>
+                        <td>
+                            <a href="/Facturas/Detalles/@factura.Id" class="btn btn-info btn-action">Ver</a>
+                            <button type="button" class="btn btn-danger btn-action" onclick="confirmarEliminar(@factura.Id)">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info text-center">
+        <p>No hay facturas registradas. <a href="/Facturas/Crear">Crear una nueva</a></p>
+    </div>
+}
+
+<script>
+    function confirmarEliminar(id) {
+        if (confirm('¿Está seguro de que desea eliminar esta factura?')) {
+            document.location.href = '/Facturas/Eliminar?id=' + id;
+        }
+    }
+</script>

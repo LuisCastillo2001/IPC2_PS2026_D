@@ -1,0 +1,56 @@
+@page
+@model CrearFacturaModel
+@{
+    ViewData["Title"] = "Crear Factura";
+}
+
+<div class="row">
+    <div class="col-md-10">
+        <h1>Crear Nueva Factura</h1>
+
+        @if (Model.Error != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @Model.Error
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        <form method="post" class="needs-validation">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Información de la Factura</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label asp-for="ClienteId" class="form-label">Cliente *</label>
+                            <select asp-for="ClienteId" class="form-control" required>
+                                <option value="">-- Seleccionar Cliente --</option>
+                                @foreach (var cliente in Model.Clientes)
+                                {
+                                    <option value="@cliente.Id">@cliente.Nombre</option>
+                                }
+                            </select>
+                            <small class="form-text text-muted">Obligatorio</small>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label asp-for="Fecha" class="form-label">Fecha *</label>
+                            <input asp-for="Fecha" type="date" class="form-control" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success btn-lg">Crear Factura</button>
+                <a href="/Facturas" class="btn btn-secondary btn-lg">Cancelar</a>
+            </div>
+        </form>
+
+        <div class="alert alert-info mt-4">
+            <strong>Nota:</strong> Después de crear la factura, podrás agregar las líneas (productos/servicios) en la página de detalles.
+        </div>
+    </div>
+</div>

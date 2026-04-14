@@ -1,0 +1,130 @@
+@page "{id}"
+@model DetallesFacturaModel
+@{
+    ViewData["Title"] = "Detalles de Factura";
+}
+
+<div class="row mb-3">
+    <div class="col-md-8">
+        <h1>Detalles de Factura #@Model.Id</h1>
+    </div>
+    <div class="col-md-4 text-end">
+        <a href="/Facturas" class="btn btn-secondary">Volver</a>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.Error))
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Model.Error
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @TempData["Mensaje"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+else if (Model.Id > 0)
+{
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Información General</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Cliente:</strong> @Model.NombreCliente</p>
+                    <p><strong>Fecha:</strong> @Model.Fecha.ToString("dd/MM/yyyy")</p>
+                    <p><strong>Total:</strong> <span class="text-success fw-bold">Q @Model.Total.ToString("F2")</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Líneas de la Factura</h3>
+
+            @if (Model.Lineas.Count > 0)
+            {
+                <div class="table-responsive mb-4">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unitario</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var linea in Model.Lineas)
+                            {
+                                <tr>
+                                    <td>@linea.Descripcion</td>
+                                    <td>@linea.Cantidad</td>
+                                    <td>Q @linea.PrecioUnitario.ToString("F2")</td>
+                                    <td>Q @(linea.Cantidad * linea.PrecioUnitario).ToString("F2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    No hay líneas agregadas aún. Agrega una línea debajo.
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Agregar Línea a la Factura</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="formLinea">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Descripcion" class="form-label">Descripción *</label>
+                                <input asp-for="Descripcion" type="text" class="form-control" required placeholder="Descripción del producto/servicio" />
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label asp-for="Cantidad" class="form-label">Cantidad *</label>
+                                <input asp-for="Cantidad" type="number" class="form-control" required step="1" min="1" placeholder="0" />
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label asp-for="PrecioUnitario" class="form-label">Precio Unitario *</label>
+                                <input asp-for="PrecioUnitario" type="number" class="form-control" required step="0.01" min="0" placeholder="0.00" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Línea</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <a href="/Facturas" class="btn btn-secondary me-2">Volver a Facturas</a>
+            <button type="button" class="btn btn-danger" onclick="confirmarEliminar(@Model.Id)">Eliminar Factura</button>
+        </div>
+    </div>
+}
+
+<script>
+    function confirmarEliminar(id) {
+        if (confirm('¿Está seguro de que desea eliminar esta factura?')) {
+            document.location.href = '/Facturas/Eliminar?id=' + id;
+        }
+    }
+</script>

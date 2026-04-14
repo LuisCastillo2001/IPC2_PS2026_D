@@ -1,0 +1,80 @@
+@page
+@model ClientesIndexModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<div class="row mb-3">
+    <div class="col-md-8">
+        <h1>Gestión de Clientes</h1>
+    </div>
+    <div class="col-md-4 text-end">
+        <a href="/Clientes/Crear" class="btn btn-primary">Nuevo Cliente</a>
+    </div>
+</div>
+
+@if (Model.Mensaje != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @Model.Mensaje
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model.Error != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @Model.Error
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+}
+
+@if (Model.Clientes.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Fecha Registro</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in Model.Clientes)
+                {
+                    <tr>
+                        <td>@cliente.Id</td>
+                        <td><strong>@cliente.Nombre</strong></td>
+                        <td>@cliente.Correo</td>
+                        <td>@cliente.Telefono</td>
+                        <td>@cliente.Direccion</td>
+                        <td>@cliente.FechaRegistro.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <a href="/Clientes/Editar/@cliente.Id" class="btn btn-warning btn-action">Editar</a>
+                            <button type="button" class="btn btn-danger btn-action" onclick="confirmarEliminar(@cliente.Id, '@cliente.Nombre')">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info text-center">
+        <p>No hay clientes registrados. <a href="/Clientes/Crear">Crear uno nuevo</a></p>
+    </div>
+}
+
+<script>
+    function confirmarEliminar(id, nombre) {
+        if (confirm('¿Está seguro de que desea eliminar a ' + nombre + '?')) {
+            document.location.href = '/Clientes/Eliminar?id=' + id;
+        }
+    }
+</script>

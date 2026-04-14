@@ -1,0 +1,5 @@
+Juan García|juan@gmail.com|7777-1234|Zona 1, Guatemala
+María López|maria@gmail.com|7777-5678|Zona 10, Guatemala
+Pedro Rodríguez|pedro@gmail.com|7777-9012|Zona 3, Guatemala
+Ana Martínez|ana@gmail.com|7778-1111|Zona 5, Guatemala
+Carlos González|carlos@gmail.com|7778-2222|Zona 12, Guatemala

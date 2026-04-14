@@ -1,0 +1,51 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card text-center" style="border-left: 5px solid #3498db;">
+            <div class="card-body">
+                <h3 class="card-title">Clientes</h3>
+                @if (Model.TotalClientes >= 0)
+                {
+                    <p class="card-text display-4" style="color: #3498db;">@Model.TotalClientes</p>
+                    <p class="text-muted">Clientes registrados en el sistema</p>
+                }
+                else
+                {
+                    <p class="text-danger">Error al cargar datos</p>
+                }
+                <a href="/Clientes" class="btn btn-primary mt-3">Ir a Clientes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-center" style="border-left: 5px solid #27ae60;">
+            <div class="card-body">
+                <h3 class="card-title">Facturas</h3>
+                @if (Model.TotalFacturas >= 0)
+                {
+                    <p class="card-text display-4" style="color: #27ae60;">@Model.TotalFacturas</p>
+                    <p class="text-muted">Facturas registradas en el sistema</p>
+                }
+                else
+                {
+                    <p class="text-danger">Error al cargar datos</p>
+                }
+                <a href="/Facturas" class="btn btn-success mt-3">Ir a Facturas</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            <h5>Bienvenido</h5>
+            <p>Sistema de gestión de clientes y facturas. Desde aquí puedes acceder a todos los módulos disponibles.</p>
+        </div>
+    </div>
+</div>

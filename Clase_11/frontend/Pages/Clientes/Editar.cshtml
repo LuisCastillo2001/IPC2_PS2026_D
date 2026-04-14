@@ -1,0 +1,47 @@
+@page "{id}"
+@model EditarClienteModel
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <h1>Editar Cliente</h1>
+
+        @if (Model.Error != null)
+        {
+            <div class="alert alert-danger">
+                @Model.Error
+            </div>
+        }
+        else
+        {
+            <form method="post">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre *</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="@Model.Nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" name="correo" value="@Model.Correo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" value="@Model.Telefono">
+                </div>
+
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <textarea class="form-control" id="direccion" name="direccion" rows="3">@Model.Direccion</textarea>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                    <a href="/Clientes" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        }
+    </div>
+</div>
