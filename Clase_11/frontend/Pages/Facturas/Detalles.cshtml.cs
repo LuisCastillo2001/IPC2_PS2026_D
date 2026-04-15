@@ -74,6 +74,7 @@ public class DetallesFacturaModel : PageModel
 {
     private readonly IHttpClientFactory httpClientFactory;
 
+    [BindProperty(SupportsGet = true)]
     public int Id { get; set; }
     public string NombreCliente { get; set; } = string.Empty;
     public DateTime Fecha { get; set; }
